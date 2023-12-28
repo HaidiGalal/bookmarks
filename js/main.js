@@ -34,7 +34,7 @@ function checkName(){
     if(regex.test(name)){
      siteName.classList.add("is-valid");
      siteName.classList.remove("is-invalid");
-      btn.classList.remove("d-none");
+    //   btn.classList.remove("d-none");
      
       
     
@@ -43,7 +43,7 @@ function checkName(){
     }else{
         siteName.classList.add("is-invalid");
         siteName.classList.remove("is-valid");
-    btn.classList.add("d-none");
+    // btn.classList.add("d-none");
    
         return false;
         
