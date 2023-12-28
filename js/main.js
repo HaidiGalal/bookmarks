@@ -8,9 +8,7 @@ var hiddenBtn= document.getElementById("hidden-btn");
 console.log(siteName);
 console.log(urlInput);
  
-    btn.classList.add("d-none");
-    hiddenBtn.classList.add("d-block");
-    hiddenBtn.classList.remove("d-none");
+   
 function checkUrl(){
     console.log(urlName.value);
     var url=urlName.value;
@@ -18,9 +16,7 @@ function checkUrl(){
     if(regex.test(url)){
      urlName.classList.add("is-valid");
      urlName.classList.remove("is-invalid");
-     btn.classList.remove("d-none");
-      hiddenBtn.classList.remove("d-block");
-      hiddenBtn.classList.add("d-none");
+     
      
      
      return true;
@@ -28,9 +24,6 @@ function checkUrl(){
         
         urlName.classList.add("is-invalid");
         urlName.classList.remove("is-valid");
-        btn.classList.add("d-none");
-        hiddenBtn.classList.add("d-block");
-        hiddenBtn.classList.remove("d-none");
        
         return false;
     }
@@ -42,8 +35,6 @@ function checkName(){
      siteName.classList.add("is-valid");
      siteName.classList.remove("is-invalid");
       btn.classList.remove("d-none");
-      hiddenBtn.classList.remove("d-block");
-      hiddenBtn.classList.add("d-none");
      
       
     
@@ -53,8 +44,6 @@ function checkName(){
         siteName.classList.add("is-invalid");
         siteName.classList.remove("is-valid");
     btn.classList.add("d-none");
-    hiddenBtn.classList.add("d-block");
-    hiddenBtn.classList.remove("d-none");
    
         return false;
         
@@ -117,6 +106,7 @@ function submit(){
    else{
     siteName.classList.remove("is-invalid");
     urlName.classList.remove("is-invalid");
+    hiddenBtn.click();
 
     console.log("false from submit function");
   
